@@ -1,0 +1,35 @@
+{
+  "name": "template-game",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A forkable template for building small JS/TS games and publishing them to GitHub Pages.",
+  "scripts": {
+    "build": "npm run typecheck && node scripts/build.js",
+    "start": "node scripts/dev-server.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.sw.json",
+    "pretest": "npm run build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.0",
+    "clean-css": "^5.3.3",
+    "esbuild": "^0.28.2",
+    "html-minifier-terser": "^7.2.0",
+    "husky": "9.1.7",
+    "jsdom": "^30.0.1",
+    "lint-staged": "17.4.1",
+    "prettier": "3.9.6",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
+  },
+  "lint-staged": {
+    "*.{js,ts,json,css,html,md}": "prettier --write"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

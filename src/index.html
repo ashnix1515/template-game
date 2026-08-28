@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Template Game</title>
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Template Game" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="manifest" href="assets/manifest.json" />
+    <link rel="apple-touch-icon" href="assets/icon.svg" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="game-canvas"></canvas>
+
+    <div id="update-notification" class="hidden">
+      <p>New version available</p>
+      <button class="refresh-button">Refresh</button>
+    </div>
+
+    <button id="info-button" aria-label="About this build">ℹ️</button>
+
+    <div id="info-modal" class="hidden">
+      <div class="info-modal-backdrop"></div>
+      <div class="info-modal-content">
+        <button id="info-modal-close" aria-label="Close">✕</button>
+        <h2>Build info</h2>
+        <p>
+          <strong>Repository</strong><br /><a
+            id="info-repo-link"
+            href="#"
+            target="_blank"
+            rel="noopener"
+          ></a>
+        </p>
+        <p><strong>Local build</strong><br /><span id="info-local-build"></span></p>
+        <p>
+          <strong>Server build</strong><br /><span id="info-server-build">Checking&hellip;</span>
+        </p>
+        <p><strong>Status</strong><br /><span id="info-update-status">Checking&hellip;</span></p>
+        <div class="button-row">
+          <button id="info-force-refresh" class="refresh-button">Force Refresh</button>
+          <a href="./debug.html" class="refresh-button" target="_blank" rel="noopener">View Logs</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="buildinfo.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

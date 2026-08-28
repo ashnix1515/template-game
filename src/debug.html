@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Template Game - Logs</title>
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Template Game" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="manifest" href="assets/manifest.json" />
+    <link rel="apple-touch-icon" href="assets/icon.svg" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="logs-container">
+      <div class="logs-header">
+        <div class="logs-header-title">
+          <a href="./index.html" class="back-link">← Home</a>
+          <h1 class="logs-title">Service Worker Logs</h1>
+        </div>
+        <button id="logs-clear" class="refresh-button">Clear Logs</button>
+      </div>
+
+      <pre id="logs-content" class="logs-content-full"></pre>
+    </div>
+
+    <script src="debug.js"></script>
+  </body>
+</html>
